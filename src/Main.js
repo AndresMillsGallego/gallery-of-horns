@@ -1,29 +1,25 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import rhino from './Rhino.jpg'
-import unicorn from './Unicorn.jpg'
-import wildebeast from './Wildebeast.jpg'
+
+import './Main.css'
 
 class Main extends React.Component {
   render() {
-    return (
-      <>
-      <HornedBeast 
-        name="Rhino"
-        description="This horned beast is a Rhinoceros.  Her name is Jean and she likes to take baths."
-        src={rhino}
+    let hornedBeasts = [];
+    this.props.data.forEach((beast, index) => {
+      hornedBeasts.push(
+        <HornedBeast
+          key={index}
+          title={beast.title}
+          image_url={beast.image_url}
+          description={beast.description}
         />
-      <HornedBeast 
-        name="Unicorn"
-        description="This horned beast is a Unicorn.  His name is Bruno and he is loved."
-        src={unicorn}
-      />
-      <HornedBeast 
-        name="Wildebeast"
-        description="These horned beasts are Wildebeasts.  Their names are Enrique and Jonesy.  They are very sleepy."
-        src={wildebeast}
-      />
-      </>
+      )
+    })
+    return (
+      <main>
+        {hornedBeasts}
+        </main>  
     )
   }
 }

@@ -1,0 +1,25 @@
+header {
+  text-align: center;
+  margin: 1rem;
+  word-spacing: 1rem;
+}
+
+.h1,
+.h1Crimson {
+  font-size: 4vw;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 2rem;
+  padding-bottom: .5rem;
+  border-bottom: 3px double crimson;
+}
+
+.h1:hover, 
+.h1Crimson:hover {
+  cursor: pointer;
+}
+
+.h1Crimson {
+  color: crimson;
+  border-bottom: 3px double black;
+}
