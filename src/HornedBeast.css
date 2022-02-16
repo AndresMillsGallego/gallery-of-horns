@@ -1,0 +1,31 @@
+.beastCard {
+  padding: 1rem;
+  border: 3px solid midnightblue;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: auto;
+}
+
+.beastCard img {
+  border: 3px solid dodgerblue;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+}
+
+.beastCard img:hover {
+  cursor: pointer;
+  border-color: red;
+}
+
+.card-title {
+  font-size: 1.5vw;
+  border-bottom: 3px double firebrick;
+  padding-bottom: .5rem;
+}
+
+.beastCard p {
+  font-size: 1.25vw;
+}

@@ -21,7 +21,7 @@ Finish time: _1:49____
 
 Actual time needed to complete: __7 minutes___
 
-Number and name of feature: __#3 Bootsrap______________________________
+Number and name of feature: __#3 Bootsrap__Note:  I needed to come back to this actually___________________________
 
 Estimate of time needed to complete: __Man with CSS it could be infinte, I am going to give myself an hour___
 
@@ -29,7 +29,7 @@ Start time: _1:51____
 
 Finish time: _2:40____
 
-Actual time needed to complete: _49 minutes____
+Actual time needed to complete: _49 minutes__- time needed for second attempt, approx. 30 min.__
 
 Number and name of feature: ___Stretch: Add Interaction_____________________________
 
