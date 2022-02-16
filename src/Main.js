@@ -10,7 +10,7 @@ class Main extends React.Component {
     let hornedBeasts = [];
     this.props.data.forEach((beast, index) => {
       hornedBeasts.push(
-        <Col>
+        <Col key={index} className="mb-4">
           <HornedBeast
             key={index}
             title={beast.title}
