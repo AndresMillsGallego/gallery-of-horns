@@ -1,0 +1,17 @@
+.modal-content {
+  border: 3px solid firebrick;
+  padding: .5rem;
+}
+
+.modal-title {
+  margin-left: 40%;
+  border-bottom: 3px double midnightblue;
+}
+
+.modal-body img {
+  border-radius: 5px;
+}
+
+.modal-footer {
+  margin: auto;
+}
