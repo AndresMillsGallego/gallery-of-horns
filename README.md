@@ -40,3 +40,15 @@ Start time: _2:45____
 Finish time: _3:35____
 
 Actual time needed to complete: _50 minutes____
+
+## Lab 03
+
+Number and name of feature: __#1 Display a Modal______________________________
+
+Estimate of time needed to complete: __1 hour___
+
+Start time: _1:20____
+
+Finish time: _4:25____
+
+I was good and took many breaks which helped!  I want to shout out Ryan here as while I did get my code to work, I could not have done it without his help.  I would say this lab took me about 3 hours of actual work.  
