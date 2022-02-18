@@ -7,13 +7,10 @@ import './Main.css'
 
 class Main extends React.Component {
   render() {
+    console.log(this.props.numberOfHorns);
     let hornedBeasts = this.props.data.map((beast, index) => (
         <Col key={index} className="mb-4">
           <HornedBeast
-            key={index}
-            title={beast.title}
-            image_url={beast.image_url}
-            description={beast.description}
             beast={beast}
             showSelectedBeast={this.props.showSelectedBeast}
           />

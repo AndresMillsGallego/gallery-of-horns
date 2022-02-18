@@ -20,10 +20,10 @@ class HornedBeast extends React.Component {
   render() {
     return (
       <Card className='beastCard h-100'>
-        <Card.Title>{this.props.title}</Card.Title>
-        <Card.Img src={this.props.image_url} alt={this.props.title} title={this.props.title} onClick={this.handleBeastClick}></Card.Img>
+        <Card.Title>{this.props.beast.title}</Card.Title>
+        <Card.Img src={this.props.beast.image_url} alt={this.props.beast.title} title={this.props.beast.title} onClick={this.handleBeastClick}></Card.Img>
         <Card.Text>💕: {this.state.hearts}</Card.Text>
-        <Card.Text>{this.props.description}</Card.Text>
+        <Card.Text>{this.props.beast.description}</Card.Text>
       </Card>
     )
   }
