@@ -10,7 +10,7 @@ class Main extends React.Component {
   render() {
     let mainBeastArray =[];
     let filteredBeastArray = this.props.data.filter(beast => beast.horns === +this.props.numberOfHorns)
-    if (!this.props.numberOfHorns) {
+    if (!this.props.numberOfHorns || this.props.numberOfHorns === 'all') {
       mainBeastArray = this.props.data
     } else if (this.props.numberOfHorns === '4+') {
       mainBeastArray = this.props.data.filter(beast => beast.horns > 3);
@@ -18,7 +18,7 @@ class Main extends React.Component {
       mainBeastArray = filteredBeastArray
     }
       let hornedBeasts = mainBeastArray.map((beast, index) => (
-        <Col key={index} className="mb-4">
+        <Col key={beast.title} className="mb-4">
           <HornedBeast
             beast={beast}
             showSelectedBeast={this.props.showSelectedBeast}

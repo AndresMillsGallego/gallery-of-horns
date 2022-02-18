@@ -41,11 +41,12 @@ class Header extends React.Component {
             <Form.Group>
               <Form.Label>How Many Horns?
                 <Form.Select name='hornSection' title='Choose How Many Horns Here'>
-                  <option defaultValue disabled>--</option>
+                  <option selected="selected" disabled>--</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4+">4+</option>
+                  <option value="all">All</option>
                 </Form.Select>
               </Form.Label>
             </Form.Group>
