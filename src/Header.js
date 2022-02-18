@@ -35,20 +35,22 @@ class Header extends React.Component {
     console.log(this.props.numberOfHorns);
     return (
       <header>
-        <h1 className={this.state.className} onClick={this.classNameChange}>Gallery of Horns</h1>
+        <h1 className={this.state.className} onClick={this.classNameChange} title="Why Not Click me?">Gallery of Horns</h1>
         <Container>
-        <Form className="hornForm" onChange={this.collectNumberOfHorns}>
-          <label>How Many Horns?
-            <select name='hornSection' title='Choose How Many Horns Here'>
-              <option defaultValue disabled="">--</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4+">4+</option>
-            </select>
-          </label>
-          <Button onClick={this.resetPage}>Reset Page</Button>
-        </Form>
+          <Form className="hornForm" onChange={this.collectNumberOfHorns}>
+            <Form.Group>
+              <Form.Label>How Many Horns?
+                <Form.Select name='hornSection' title='Choose How Many Horns Here'>
+                  <option defaultValue disabled>--</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4+">4+</option>
+                </Form.Select>
+              </Form.Label>
+            </Form.Group>
+            <Button onClick={this.resetPage}>Reset Page</Button>
+          </Form>
         </Container>
       </header>
     )

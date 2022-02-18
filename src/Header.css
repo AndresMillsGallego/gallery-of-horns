@@ -29,20 +29,20 @@ header {
   flex-direction: column;
 }
 
-.hornForm label {
-  margin-bottom: 1rem;
-}
-
 .btn {
   margin: auto;
-  width: 40%;
+  width: 30%;
   font-size: .75vw;
 }
 
-label {
-  font-size: 1vw;
+.form-label {
+  font-size: 2vw;
+  margin-bottom: 1rem;
 }
-select {
-  margin-left: 1rem;
-  width: 5%;
+
+.form-select {
+  text-align: center;
+  width: 50%;
+  font-size: .75vw;
+  margin: .5rem auto;
 }
