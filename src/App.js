@@ -13,7 +13,7 @@ class App extends React.Component {
     this.state = {
       displayModal: false,
       beast: {},
-      numberOfHorns: 0
+      numberOfHorns: ''
     }
   }
   
@@ -29,7 +29,7 @@ class App extends React.Component {
   handleHornSelection = (numberOfHorns) => {
     this.setState({numberOfHorns})
   };
-  
+
   render() {
     console.log(this.state.numberOfHorns);
     return (

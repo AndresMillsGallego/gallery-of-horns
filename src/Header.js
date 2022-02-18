@@ -1,5 +1,7 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
 
 import './Header.css';
 
@@ -13,24 +15,31 @@ class Header extends React.Component {
 
   classNameChange = () => {
     if (this.state.className === 'h1') {
-      this.setState({className: 'h1Crimson'});
+      this.setState({ className: 'h1Crimson' });
     } else {
-      this.setState({className: 'h1'})
+      this.setState({ className: 'h1' })
     }
   }
-  
+
   collectNumberOfHorns = (event) => {
     let numberOfHorns = event.target.value;
     this.props.handleHornSelection(numberOfHorns)
+  }
+
+  resetPage = () => {
+    window.location.reload();
+    alert('Page reset!  You get to see ALL the beasts now!')
   }
 
   render() {
     console.log(this.props.numberOfHorns);
     return (
       <header>
-        <Form onChange={this.collectNumberOfHorns}>
+        <h1 className={this.state.className} onClick={this.classNameChange}>Gallery of Horns</h1>
+        <Container>
+        <Form className="hornForm" onChange={this.collectNumberOfHorns}>
           <label>How Many Horns?
-            <select name='hornSection'>
+            <select name='hornSection' title='Choose How Many Horns Here'>
               <option defaultValue disabled="">--</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -38,8 +47,9 @@ class Header extends React.Component {
               <option value="4+">4+</option>
             </select>
           </label>
+          <Button onClick={this.resetPage}>Reset Page</Button>
         </Form>
-        <h1 className={this.state.className} onClick={this.classNameChange}>Gallery of Horns</h1>
+        </Container>
       </header>
     )
   }
