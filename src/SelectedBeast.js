@@ -19,7 +19,7 @@ class SelectedBeast extends React.Component {
             <Modal.Title>{this.props.beast.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <img src={this.props.beast.image_url} alt={this.props.beast.title} title={this.props.beast.title} style={{width:'100%'}}></img>
+            <img src={this.props.beast.image_url} alt={this.props.beast.title} title={this.props.beast.title}></img>
           </Modal.Body>
           <Modal.Footer>{this.props.beast.description}</Modal.Footer>
         </Modal>

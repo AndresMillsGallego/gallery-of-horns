@@ -6,19 +6,21 @@ class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      className: 'hiddenLink',
+      linkClass: 'hiddenLink',
+      andresClass: 'andres',
       text: 'My Github',
       href: 'https://github.com/AndresMillsGallego'
     }
   }
 
-showLink = () => this.setState({className: 'visibleLink'});
+showLink = () => this.setState({linkClass: 'visibleLink', andresClass: 'clicked'});
 
   render() {
     return (
-      <footer onClick={this.showLink}>
-        <p>Project by ©Andres Mills Gallego</p>
-        <a href={this.state.href} className={this.state.className}>{this.state.text}</a>
+      <footer>
+        <p onClick={this.showLink} className={this.state.andresClass}>Project by ©Andres Mills Gallego</p>
+        <p className={this.state.linkClass}>👟  👉  👟  👉  👟  👉  👟  👉  👟  👉  👟</p>
+        <a href={this.state.href} className={this.state.linkClass}>{this.state.text}</a>
       </footer>
     )
   }

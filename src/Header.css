@@ -23,3 +23,26 @@ header {
   color: crimson;
   border-bottom: 3px double black;
 }
+
+.hornForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  margin: auto;
+  width: 30%;
+  font-size: .75vw;
+}
+
+.form-label {
+  font-size: 2vw;
+  margin-bottom: 1rem;
+}
+
+.form-select {
+  text-align: center;
+  width: 50%;
+  font-size: .75vw;
+  margin: .5rem auto;
+}

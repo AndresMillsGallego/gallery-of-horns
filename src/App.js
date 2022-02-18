@@ -6,15 +6,17 @@ import data from './data.json'
 import React from 'react';
 import SelectedBeast from './SelectedBeast';
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       displayModal: false,
-      beast: {}
+      beast: {},
+      numberOfHorns: ''
     }
   }
-
+  
   closeModal = () => this.setState({displayModal: false});
 
   showSelectedBeast = (beast) => {
@@ -23,8 +25,13 @@ class App extends React.Component {
       beast
     });
   };
+  
+  handleHornSelection = (numberOfHorns) => {
+    this.setState({numberOfHorns})
+  };
 
   render() {
+    console.log(this.state.numberOfHorns);
     return (
       <>
         <SelectedBeast 
@@ -32,10 +39,14 @@ class App extends React.Component {
           closeModal={this.closeModal}
           beast={this.state.beast}
           />
-        <Header />
+        <Header 
+          numberOfHorns={this.state.numberOfHorns}
+          handleHornSelection={this.handleHornSelection}
+         />
         <Main 
           data={data} 
           showSelectedBeast={this.showSelectedBeast} 
+          numberOfHorns={this.state.numberOfHorns}
           />
         <Footer />
       </>

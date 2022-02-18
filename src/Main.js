@@ -6,14 +6,20 @@ import Col from 'react-bootstrap/Col'
 import './Main.css'
 
 class Main extends React.Component {
+
   render() {
-    let hornedBeasts = this.props.data.map((beast, index) => (
+    let mainBeastArray =[];
+    let filteredBeastArray = this.props.data.filter(beast => beast.horns === +this.props.numberOfHorns)
+    if (!this.props.numberOfHorns) {
+      mainBeastArray = this.props.data
+    } else if (this.props.numberOfHorns === '4+') {
+      mainBeastArray = this.props.data.filter(beast => beast.horns > 3);
+    } else {
+      mainBeastArray = filteredBeastArray
+    }
+      let hornedBeasts = mainBeastArray.map((beast, index) => (
         <Col key={index} className="mb-4">
           <HornedBeast
-            key={index}
-            title={beast.title}
-            image_url={beast.image_url}
-            description={beast.description}
             beast={beast}
             showSelectedBeast={this.props.showSelectedBeast}
           />
